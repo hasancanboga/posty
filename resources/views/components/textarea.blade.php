@@ -1,5 +1,5 @@
 @props(['hasError'])
 
-<textarea {{ $attributes(['class' => $hasError ? 'border-red-900' : '']) }}>
+<textarea {{ $attributes(['class' => $hasError ? 'border-red-500' : '']) }}>
     {{ $slot }}
   </textarea>
