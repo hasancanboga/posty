@@ -9,7 +9,7 @@ class PostController extends Controller
 {
     public function __construct()
     {
-        // $this->middleware(['auth']);
+        $this->middleware(['auth'])->except(['index']);
     }
 
     /**
@@ -58,7 +58,9 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('posts.show', [
+            'post' => $post,
+        ]);
     }
 
     /**
